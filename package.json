@@ -18,7 +18,10 @@
     "simple-react-lightbox": "^2.7.3-2",
     "w3-css": "^4.1.0"
   },
+  "homepage": "http://jlee122.github.io/portfolio-react",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
