@@ -4,6 +4,7 @@ import About from './About'
 import Resume from './Resume'
 import Projects from './Projects'
 import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
+import Guestbook from './Guestbook'
 
 export class Body extends Component {
     displayContent = () => {
@@ -14,10 +15,12 @@ export class Body extends Component {
             return <About/>
         else if(activeTab == 3)
             return <Resume/>
-        else
+        else if(activeTab == 4)
             return (
             <SimpleReactLightbox><Projects/></SimpleReactLightbox>
             )
+        else if(activeTab == 5)
+            return <Guestbook/>
     }
     render() {
         return (this.displayContent());        

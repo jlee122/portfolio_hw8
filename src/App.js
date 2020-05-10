@@ -4,7 +4,7 @@ import Tablist from './Components/Tablist';
 import Body from './Components/Body';
 import Footer from './Components/Footer';
 
-export class App extends Component {
+export class App extends Component {  
   constructor(){
     super();
     this.state = {
@@ -16,7 +16,8 @@ export class App extends Component {
       })
     }
   }
-
+  
+  
   render() {
     const tabs = [
     {
@@ -34,8 +35,13 @@ export class App extends Component {
     {
       id: 4,
       title: 'Projects'
+    },
+    {
+      id: 5,
+      title: 'Guestbook'
     }   
     ]
+
     return (      
       <div className = "body">
         <div className="header">

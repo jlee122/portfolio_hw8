@@ -118,3 +118,57 @@ h2 {
   max-width: 100%;
   cursor: pointer;
 }
+
+.guestbook {
+  display: flex;
+  width: 100%;
+  background-color: grey;
+}
+
+.guestform {
+  width: 50%;
+}
+
+.posts {
+  width: 50%;
+  margin: 20px;
+  border-radius: 10px;
+  padding: 10px;
+  background-color: #ccc;
+  overflow: scroll;
+  max-height: 550px;
+}
+li {
+  color: white;
+}
+li > h6 {
+  color: grey;
+}
+form {
+  width: 100%;
+  margin: 10px;
+  padding: 10px;
+  background-color: #ccc;
+  border-radius: 5px;
+}
+input {
+  width: 100%;
+  padding: 12px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-bottom: 1px solid grey;
+  box-sizing:border-box;
+  background-color: #ccc;
+}
+
+input[type=submit] {
+  background-color: grey;
+  color: white;
+  border: none;
+  margin: 3px;
+}
+
+#guestText {
+  color: white;
+  font-family: Verdana;
+}

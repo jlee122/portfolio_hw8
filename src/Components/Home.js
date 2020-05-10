@@ -5,7 +5,7 @@ export class Home extends Component {
         return (
             <div className="home">
                 <div className="ucsb-image">
-                    <img src="ucsb.jpg"></img>
+                    <img src="ucsb.jpg" alt="UCSB"></img>
                 </div>
                 <div className="home-text">
                     <h2>Joon's Portfolio</h2>
