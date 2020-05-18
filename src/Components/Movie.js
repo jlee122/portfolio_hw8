@@ -2,7 +2,6 @@ import React, { Component } from 'react'
 import { SRLWrapper } from "simple-react-lightbox"
 import ScrollUpButton from "react-scroll-up-button"
 
-const IDs = [ 'tt7286456', 'tt4154796']
 const axios = require('axios')
 
 const PREFIX = 'https://www.omdbapi.com/?apikey=ec83e25b&i='
@@ -13,7 +12,7 @@ async function getMoviePoster(movie){
         const data = res.data;
         var x = document.getElementById(movie)
         x.src = data["Poster"].toString()
-        x.alt = data["Title"] + "  Director: " + data["Director"] + "  IMDB Rating: " + data["imdbRating"]
+        x.alt = data["Title"] + ",  Director: " + data["Director"] + ",  IMDB Rating: " + data["imdbRating"]
     }
     catch(e){
         console.log(e);
