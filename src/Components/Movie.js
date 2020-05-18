@@ -5,7 +5,7 @@ import ScrollUpButton from "react-scroll-up-button"
 const IDs = [ 'tt7286456', 'tt4154796']
 const axios = require('axios')
 
-const PREFIX = 'http://www.omdbapi.com/?apikey=ec83e25b&i='
+const PREFIX = 'https://www.omdbapi.com/?apikey=ec83e25b&i='
 
 function getMoviePoster(movie){
     axios.get(PREFIX+movie).then((res)=>{
