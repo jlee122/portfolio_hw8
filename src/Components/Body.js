@@ -23,7 +23,7 @@ export class Body extends Component {
         else if(activeTab == 5)
             return <Guestbook/>
         else if(activeTab == 6)
-            return <Movie/>
+            return (<SimpleReactLightbox><Movie/></SimpleReactLightbox>)
     }
     render() {
         return (this.displayContent());        

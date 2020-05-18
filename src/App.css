@@ -119,6 +119,23 @@ h2 {
   cursor: pointer;
 }
 
+.movie-grid {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+  grid-gap: 1rem;
+  bottom: 0;
+}
+.movie-grid > .movie {
+  margin: auto;
+}
+
+.movie-grid > .movie > img {
+  max-width: 100%;
+  cursor: pointer;
+}
+
+
 .guestbook {
   display: flex;
   width: 100%;
