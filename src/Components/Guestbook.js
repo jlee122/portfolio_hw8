@@ -14,7 +14,7 @@ export class Guestbook extends Component {
 
         this.handleChange = this.handleChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-    }
+    } 
       
     handleChange(event){
         if(event.value === undefined){
@@ -61,7 +61,7 @@ export class Guestbook extends Component {
           });
         });
     }
-    componentDidUpdate(prevProps, prevState, snapshoyt){
+    componentDidUpdate(prevProps, prevState, snapshot){
     //only call set state here if it is wrapped in a condition
     //if you initialize this.state.shouldUpdate and have not changed it yet then this will not run
         if(this.state.shouldUpdate != prevState.shouldUpdate){

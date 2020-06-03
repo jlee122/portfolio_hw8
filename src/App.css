@@ -122,7 +122,7 @@ h2 {
 .movie-grid {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, auto));
+  grid-template-columns: repeat(4, auto);
   grid-gap: 1rem;
   bottom: 0;
 }
@@ -134,8 +134,36 @@ h2 {
   max-width: 100%;
   cursor: pointer;
 }
+.load {
+  width: 99%;
+  margin: 10px 10px;
+  padding-right: 10px;
+}
+.movie-header {
+  display: flex;
+}
+.movie-header > .search-bar {
+  margin-right: 0
+}
+.sort-dropdown {
+  display: inline-block;
+  padding: 10px 10px;
+  margin: 10px 0px;
+}
+/* .modal-body {
+  display: flex;
+} */
 
-
+.modal-body > img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: auto;
+  height: auto;
+}
+.modal-body > .info {
+  margin-top: 10px;
+}
 .guestbook {
   display: flex;
   width: 100%;
@@ -168,7 +196,7 @@ form {
   background-color: #ccc;
   border-radius: 5px;
 }
-input {
+.guestform > form > label > input {
   width: 100%;
   padding: 12px;
   display: inline-block;
@@ -188,4 +216,21 @@ input[type=submit] {
 #guestText {
   color: white;
   font-family: Verdana;
+}
+
+.add-movie-header {
+  color: black;
+  padding: 0px 20px;
+}
+.movie-input {
+  display: flex;
+  width: 50%;
+}
+.list-header {
+  color: black;
+  padding: 0px 20px;
+}
+.list-input {
+  display: flex;
+  width: 50%;
 }

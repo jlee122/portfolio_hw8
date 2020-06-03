@@ -6,8 +6,39 @@ import Projects from './Projects'
 import SimpleReactLightbox, { SRLWrapper } from "simple-react-lightbox"
 import Guestbook from './Guestbook'
 import Movie from './Movie'
+import AddMovie from './AddMovie'
+import CreateList from './CreateList'
+import firebase from '../config'
+
 
 export class Body extends Component {
+    constructor() {
+        super();
+        this.state = {
+            lists: ['All', 'Watched', 'WannaWatch']
+        }
+        this.addList = (list) => {
+            const newList = this.state.lists;
+            newList.push(list);
+            this.setState({
+                lists: newList
+            })
+        }
+    }
+    componentDidMount() {
+        const itemRef = firebase.database().ref('list');
+        itemRef.orderByChild('list').once('value', (snapshot) => {
+            let items = snapshot.val();
+            let newList = this.state.lists;
+            for( let item in items ){
+                if(!newList.includes(items[item].list)){
+                    newList.push(items[item].list)
+                }
+            }
+            this.setState({lists: newList})
+        })
+
+    }
     displayContent = () => {
         var activeTab = this.props.activeTab
         if(activeTab == 1)
@@ -23,7 +54,11 @@ export class Body extends Component {
         else if(activeTab == 5)
             return <Guestbook/>
         else if(activeTab == 6)
-            return (<SimpleReactLightbox><Movie/></SimpleReactLightbox>)
+            return <Movie lists={this.state.lists}/>
+        else if(activeTab == 7)
+            return <AddMovie/>
+        else if(activeTab == 8)
+            return <CreateList lists={this.state.lists} addList={this.addList}/>
     }
     render() {
         return (this.displayContent());        
