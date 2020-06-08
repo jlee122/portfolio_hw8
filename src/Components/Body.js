@@ -8,6 +8,7 @@ import Guestbook from './Guestbook'
 import Movie from './Movie'
 import AddMovie from './AddMovie'
 import CreateList from './CreateList'
+import Demo from './Demo'
 import firebase from '../config'
 
 
@@ -59,6 +60,8 @@ export class Body extends Component {
             return <AddMovie/>
         else if(activeTab == 8)
             return <CreateList lists={this.state.lists} addList={this.addList}/>
+        else if(activeTab == 9)
+            return <Demo/>
     }
     render() {
         return (this.displayContent());        

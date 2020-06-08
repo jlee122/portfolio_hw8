@@ -173,34 +173,12 @@ export class Movie extends Component {
         })
     }
     componentDidUpdate(prevProps, prevState, snapshot){
-        // let limit = 8*this.state.visible;
-        // console.log(this.state.visible, prevState.visible)
-        // if(prevState.visible !== this.state.visible) {
-        //     this.state.shouldUpdate = true
-        // }
         //only call set state here if it is wrapped in a condition
         //if you initialize this.state.shouldUpdate and have not changed it yet then this will not run
             if(this.state.shouldUpdate != prevState.shouldUpdate){
                 //same code as above to retrieve the data
-                console.log("HI")
                 this.displayList(this.state.currentList);
-                // const itemsRef = firebase.database().ref('movies');                
-                // itemsRef.limitToFirst(limit).on('value', (snapshot) => {
-                //     let items = snapshot.val();
-                //     let newState = [];
-                //     for (let item in items) {
-                //         newState.push({
-                //             id: item,
-                //             title: items[item].title,
-                //             director: items[item].director,
-                //             rating: items[item].rating,
-                //             poster: items[item].poster
-                //         })
-                //     }
-                //     this.setState({
-                //         movies: newState
-                //     });
-                // })                
+              
             }
         }
 
